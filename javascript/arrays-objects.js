@@ -4,7 +4,8 @@
 // - an array of strings: 'apple', 'berry', 'cherry'
 // - the boolean value true
 function myArr() {
-  const newArr = newArr.push(4, "abc", ["apple, berry, cherry"], true)
+  const newArr = []
+  newArr.push(4, "abc", ["apple, berry, cherry"], true)
 }
 
 // The following array, `nestedLetters`, contains many levels of nested arrays.
@@ -21,7 +22,7 @@ function flatAnimals() {
   const savannah = ['lion', 'zebra', 'lion', 'giraffe'];
   const desert = ['rattlesnake', 'coyote'];
   // Replace this with your code
-  return combined = [...forest, ...ocean, ...savannah, ...desert]
+  return [...forest, ...ocean, ...savannah, ...desert]
 }
 
 // Now use the spread operator to return a copy of the animals array with 'elephant' at
@@ -46,7 +47,7 @@ function improveGameRating() {
 
   // Replace this with your code
   delete gameInfo.rating
-  // return gameInfo;
+  return gameInfo;
 }
 
 // You only like even numbers, so get rid of the other shapes by
@@ -237,7 +238,7 @@ function lastTopic() {
 // Return the userId of the first response to
 // gn@rly_c0der_007's 2nd comment using dot/bracket notation.
 function firstResponseId() {
-  return userInfo.comments[1].responses[1].userId
+  return userInfo.comments[1].responses[0].userId
 }
 
 export {
