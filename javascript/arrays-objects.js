@@ -6,7 +6,11 @@
 function myArr() {
   const newArr = []
   newArr.push(4, "abc", ["apple, berry, cherry"], true)
+  // console.log(newArr)
+  return newArr;
 }
+
+// myArr()
 
 // The following array, `nestedLetters`, contains many levels of nested arrays.
 // Return the letter 'z' from `nestedLetters` using bracket notation.
@@ -64,12 +68,15 @@ function evenShapes() {
   };
 
   // Replace this with your code
-  for (let shape of shapes) {
-    if (!shapes[shape] % 2 === 0) {
-      delete shapes[shape]
-    }
-  }
+  for (const odd in shapes) {
+    if (shapes[odd] % 2 === 1)
+      delete shapes[odd]
+  } // console.log(shapes)
+  return shapes
 }
+
+// evenShapes()
+
 
 // Write a for loop that loops over the classes array,
 // nest a for in loop to loop over each object.
@@ -104,13 +111,12 @@ function betterCourses() {
   ];
 
   // Replace this with your code
-  for (let i = 0; i < courses.length; i++) {
-    for (const key in courses)
-      if (courses.key === true) {
-        courses.key = false
+  for (let i = 0; i < courses.length; i++)
+    for (const key in courses[i])
+      if (courses[i][key] === true) {
+        courses[i][key] = false
       }
-  }
-
+  // console.log(courses)
   return courses;
 }
 
@@ -123,6 +129,7 @@ function findPairs() {
   const pairsArray = [];
 
   // Replace this with your code
+
 
   return pairsArray;
 }
@@ -170,11 +177,13 @@ function getZipAndState() {
 // Return the new object.
 function getEllensInfo() {
   // Replace this with your code
-  const daughter = [...contactInfo, ...shippingInfo]
-  daughter.contactInfo.name = "Ellen"
-  daughter.contactInfo.email = 'ellen@email.com'
-  daughter.shippingInfo.name = "Ellen"
+  let daughter = { ...contactInfo, ...shippingInfo }
+  daughter.name = "Ellen"
+  daughter.email = 'ellen@email.com'
+  // console.log(daughter)
+  return daughter;
 }
+// getEllensInfo()
 
 // Use the userInfo object below to complete problems 9-11.
 const userInfo = {
