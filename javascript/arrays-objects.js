@@ -129,10 +129,24 @@ function findPairs() {
   const pairsArray = [];
 
   // Replace this with your code
-
-
+  for (let i = 0; i < lettersToPair.length; i++) {
+    for (let j = i + 1; j < lettersToPair.length; j++) {
+      if (lettersToPair[i] === lettersToPair[j]) {
+        pairsArray.push([i, j])
+      }
+    }
+  }
   return pairsArray;
 }
+
+// lettersToPair.forEach((letter, ind) => {
+//   lettersToPair.forEach((secLetter, secInd) => {
+//     if(letter === secLetter && ind < secInd){
+//       pairsArray.push([ind, secInd])
+//     }
+//   })
+//   return pairsArray
+// })
 
 // For these problems we will be using the objects below, contactInfo and shippingInfo,
 // as well as objects that you will make based off these two.
@@ -183,7 +197,7 @@ function getEllensInfo() {
   // console.log(daughter)
   return daughter;
 }
-// getEllensInfo()
+// {...shippingInfo, ...contactInfo, name: "Ellen", email: "ellen@email.com"}
 
 // Use the userInfo object below to complete problems 9-11.
 const userInfo = {

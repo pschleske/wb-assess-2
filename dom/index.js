@@ -4,6 +4,7 @@ function handleClick(event) {
     const btnToggle = document.querySelector("#close");
     const userName = document.querySelector("#name");
     const userEmail = document.querySelector("#email");
+    const subscribeHeader = document.getElementsByClassName("form-container")[0]
     // Add an event listener on the #close - form element to handle the 'click' event, so that when users click on the element,
     //     it toggles the hide class on the form, so the contents of the form collapse.
     //     it changes from displaying 'X' to '+'.
@@ -33,7 +34,8 @@ function handleClick(event) {
         }
         // If the user fills out both required fields, then replace the text of the form’s parent element to say, “Thank you for subscribing!”
         else {
-            form.parentElement.textContent = "Thank you for subscribing"
+            // subscribeHeader.parentElement.textContent = "Thank you for subscribing"
+            subscribeHeader.innerText = "Thank you for subscribing"
         }
     });
 

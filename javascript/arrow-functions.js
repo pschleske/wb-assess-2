@@ -46,11 +46,20 @@ const foods = [
 // Calories can be calculated by multiplying carbs by 4, protein by 4, fat by 9,
 // and then adding the results together.
 // Replace this with your code
+// function addCalories() {
+//   foods.forEach((item) => {
+//     let calories = (item.carbs + item.protein * 4 + item.fat * 9)
+//     // console.log(calories)
+//   })
+// }
+
 function addCalories() {
   foods.forEach((item) => {
-    let calories = (item.carbs + item.protein * 4 + item.fat * 9)
-    console.log(calories)
+    item.calories = (item.carbs + item.protein * 4 + item.fat * 9)
+    //  item.calories = (item.carbs * 4) + (item.protein * 4) + (item.fat * 9)
+    // console.log(calories)
   })
+  return foods;
 }
 
 // addCalories()
