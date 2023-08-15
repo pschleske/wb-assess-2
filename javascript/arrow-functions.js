@@ -55,8 +55,7 @@ const foods = [
 
 function addCalories() {
   foods.forEach((item) => {
-    item.calories = (item.carbs + item.protein * 4 + item.fat * 9)
-    //  item.calories = (item.carbs * 4) + (item.protein * 4) + (item.fat * 9)
+    item.calories = (item.carbs * 4) + (item.protein * 4) + (item.fat * 9)
     // console.log(calories)
   })
   return foods;
@@ -99,6 +98,7 @@ const products = [
 // and return it.
 function getSaleProducts() {
   const bigSale = products.map((product) => product.price - product.price * .25)
+  return bigSale
 }
 
 // A customer has placed an order - they want one of every product that has blue on it.
@@ -107,6 +107,7 @@ function getSaleProducts() {
 // (Hint: look up the array method 'includes' on MDN)
 function getBlueProducts() {
   const blueProducts = products.filter((product) => product.color.includes("blue"))
+  return blueProducts;
   // console.log(blueProducts)
 }
 // getBlueProducts()
