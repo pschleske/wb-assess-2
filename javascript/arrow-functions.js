@@ -12,7 +12,7 @@ const bestMovie = movie => `${movie} is the best movie ever!`// Replace `undefin
 // which will be numbers.
 // The function should return the bigger number.
 // If the numbers are the same, just return the number.
-const compareNums = (num1, num2) => num1 > num2 ? num1 || num2 > num1 ? num2 : num1;
+const compareNums = (num1, num2) => num1 > num2 ? num1 || num2 > num1 ? num2 : num1
 // Replace `undefined` with your code
 
 const foods = [

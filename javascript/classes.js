@@ -7,10 +7,10 @@
 // - Bicycles come in different colors (ex.: red, silver, blue…)
 class Bicycle {
   // Replace this with your code
-  constructor(wheels = 2, manufacturers, colors) {
-    this.wheels = wheels
-    this.manufacturers = manufacturers
-    this.colors = colors
+  constructor(numWheels = 2, manufacturer, color = "red") {
+    this.numWheels = numWheels;
+    this.manufacturer = manufacturer;
+    this.color = color;
   }
 }
 
@@ -61,12 +61,12 @@ class Library {
   }
 
   createAndAddBook(title, author) {
-    this.books.push(title, author)
+    const newBook = new Book(title, author)
+    this.books.push(newBook)
   }
 
   findBooksByAuthor(author) {
-    return this.books.filter((author) => this.author === author ? author : []
-    )
+    return this.books.filter((book) => book.author === author)
   }
 }
 
@@ -99,7 +99,15 @@ class Rectangle {
 
 class Square extends Rectangle {
   // Replace this with your code
-  constructor() {
+  constructor(oneSide) {
+    super(oneSide, oneSide)
+  }
+  getArea() {
+    if (this.length === this.width) {
+      return this.length * this.width
+    } else {
+      return undefined
+    }
   }
 }
 
