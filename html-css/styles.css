@@ -20,12 +20,6 @@ li
 footer 
 a heading element (h1–h6)
 */
-body {
-    /* height: 100vh; */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
 
 nav {
     background-color: rgb(37, 37, 37);
@@ -47,10 +41,10 @@ nav {
     color: white;
 }
 
-main {
+/* main {
     display: flex;
     flex-wrap: wrap;
-}
+} */
 
 .mainH {
     display: inline-block;
@@ -62,13 +56,32 @@ h1 {
 
 }
 
-main {
-    width: 60%;
+/* main {
+    width: 50%;
     padding: 100px;
     margin: 50px 50px 50px 50px;
+} */
+
+.top-container {
+    display: flex;
+    justify-content: space-around;
 }
 
-.main-write {}
+.main-write {
+    margin: 50px;
+    justify-content: center;
+}
+
+.side-bar {
+    width: 400px;
+    margin: 500px;
+}
+
+.gallery {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .gallery img {
     height: 300px;
