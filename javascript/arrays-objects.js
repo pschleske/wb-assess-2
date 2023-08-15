@@ -5,7 +5,7 @@
 // - the boolean value true
 function myArr() {
   const newArr = []
-  newArr.push(4, "abc", ["apple, berry, cherry"], true)
+  newArr.push(4, "abc", ["apple", "berry", "cherry"], true)
   // console.log(newArr)
   return newArr;
 }
